@@ -16,6 +16,7 @@ def GetNames():
     df = pd.read_csv('general_bamboohr_org_chart.csv')
     names = df["Name"].unique()
     AllNames = df.loc[df["Name"] == names]["Name"].values
+    print(AllNames)
     return AllNames
 
 def connectionLinkedin(names):
